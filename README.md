@@ -1,6 +1,6 @@
 # Monitoramento de Serviço Nginx no WSL
 
-<img width="30%"  src="https://github.com/KhauanGB/monitoramento-nginx/CompassLogo.svg"/>
+<img width="30%"  src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/CompassLogo.svg"/>
 
 ## 1. Introdução
 Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsystem for Linux) e automatiza o monitoramento do serviço Nginx, com logs registrados a cada 5 minutos. A documentação cobre desde a instalação do ambiente, configuração do Nginx, criação de um script de monitoramento, automação com cron e versionamento com Git.
