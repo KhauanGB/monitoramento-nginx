@@ -1,9 +1,9 @@
 # Monitoramento de Serviço Nginx no WSL
 
-<img width="30%"  src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/CompassLogo.svg"/>
+<img width="30%" src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/CompassLogo.svg"/>
 
 ## 1. Introdução
-Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsystem for Linux) e automatiza o monitoramento do serviço Nginx, com logs registrados a cada 5 minutos. A documentação cobre desde a instalação do ambiente, configuração do Nginx, criação de um script de monitoramento, automação com cron e versionamento com Git.
+Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsystem for Linux) e automatiza o monitoramento do serviço Nginx, com logs registrados a cada 5 minutos. A documentação cobre desde a instalação do ambiente, configuração do Nginx, criação de um script de monitoramento.
 
 ## 2. Ambiente Linux no Windows (WSL)
   2.1. Instalação do WSL
@@ -35,6 +35,8 @@ Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsys
 
 		sudo systemctl start nginx
 		sudo systemctl status nginx
+
+  <img src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/Nginx.png"/>
 
    Para configurar o Nginx para iniciar automaticamente:
 
@@ -72,6 +74,8 @@ Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsys
 
    O sistema irá perguntar qual editor você deseja usar para editar o crontab. Escolha o editor de sua preferência (por exemplo, nano).
 
+   <img  src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/Crontab.png"/>
+
    Adicione a seguinte linha ao final do arquivo aberto no editor para que o script seja executado a cada 5 minutos:
 
 		*/5 * * * * /home/khauan/nginx_status.sh
@@ -91,7 +95,17 @@ Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsys
 
 		./nginx_status.sh
 
-   Verifique se os arquivos nginx_online.txt ou nginx_offline.txt foram gerados conforme esperado no diretório /home/khauan/.
+   Verifique se os arquivos nginx_online.txt ou nginx_offline.txt foram gerados conforme esperado no diretório /home/usuario/.
 
 ## 7. Verificação de logs 
    Para verificar se a tarefa está sendo executada conforme o esperado, você pode utilizar o comando "cat" para visualizar o conteúdo dos arquivos:
+   
+<img src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/Online.png"/>
+
+   Como o Nginx estará funcionando e se nenhum erro ocorrer os logs estarão somente em nginx_online.txt.
+   Para verificar os logs offline basta parar o funcionamento do Nginx com:
+   
+		sudo systemctl stop nginx
+  
+<img src="(https://github.com/KhauanGB/monitoramento-nginx/blob/main/Offline.png)"/>
+   
