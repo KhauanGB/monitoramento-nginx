@@ -3,7 +3,7 @@
 <img width="30%" src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/CompassLogo.svg"/>
 
 ## 1. Introdução
-Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsystem for Linux) e automatiza o monitoramento do serviço Nginx, com logs registrados a cada 5 minutos. A documentação cobre desde a instalação do ambiente, configuração do Nginx, criação de um script de monitoramento.
+Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsystem for Linux) e automatiza o monitoramento do serviço Nginx, com logs registrados a cada 5 minutos. A documentação cobre desde a instalação do ambiente, configuração do Nginx e criação de um script de monitoramento.
 
 ## 2. Ambiente Linux no Windows (WSL)
   ### 2.1. Instalação do WSL
