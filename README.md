@@ -94,6 +94,4 @@ Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsys
    Verifique se os arquivos nginx_online.txt ou nginx_offline.txt foram gerados conforme esperado no diretório /home/khauan/.
 
 ## 7. Verificação de logs 
-   Para verificar se a tarefa está sendo executada conforme o esperado, você pode inspecionar os logs do cron com o seguinte comando:
-
-		grep CRON /var/log/syslog
+   Para verificar se a tarefa está sendo executada conforme o esperado, você pode utilizar o comando "cat" para visualizar o conteúdo dos arquivos:
