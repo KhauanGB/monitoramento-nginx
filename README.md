@@ -82,7 +82,7 @@ Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsys
 
    Salve e saia do editor.
 
-   Se você estiver usando o nano, salve com CTRL + O, pressione Enter, e depois saia com CTRL + X.
+   Se estiver usando o nano, salve com CTRL + O, pressione Enter, e depois saia com CTRL + X.
    Para outros editores, siga as instruções específicas do editor.
    Após salvar e fechar, o cron já estará configurado para rodar o script automaticamente a cada 5 minutos
 
@@ -98,11 +98,13 @@ Este projeto configura um ambiente Linux no Windows usando o WSL (Windows Subsys
    Verifique se os arquivos nginx_online.txt ou nginx_offline.txt foram gerados conforme esperado no diretório /home/usuario/.
 
 ## 7. Verificação de logs 
-   ### 7.1 Para verificar se a tarefa está sendo executada conforme o esperado, você pode utilizar o comando "cat" para visualizar o conteúdo dos arquivos:
+   ### 7.1 Logs online
+   Para verificar se a tarefa está sendo executada conforme o esperado, poderá ser utilizado o comando "cat" para visualizar o conteúdo dos arquivos:
    
 <img src="https://github.com/KhauanGB/monitoramento-nginx/blob/main/Online.png"/>
 
-   ### 7.2 Como o Nginx estará funcionando e se nenhum erro ocorrer os logs estarão somente em nginx_online.txt.
+   ### 7.2 Logs offline
+   Como o Nginx estará funcionando e se nenhum erro ocorrer os logs estarão somente em nginx_online.log.
    Para verificar os logs offline basta parar o funcionamento do Nginx com:
    
 		sudo systemctl stop nginx
